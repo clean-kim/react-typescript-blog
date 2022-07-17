@@ -1,23 +1,15 @@
-import axios from "axios";
-import {useEffect, useState} from "react";
-import {Blog} from "../interface/Blog";
+import React from "react";
+import {ListItems} from "./ListItems";
+import {BlogProps} from "../interface/Blog";
+import ListStyle from "../assets/List.module.scss";
 
-
-function List() {
-    type BlogTitle = Pick<Blog, 'no' | 'title'>;
-    const [list, setList] = useState([{no: 0, title: ''}]);
-    useEffect(() => {
-        axios.get('/api/list').then(res => {
-            res.data.forEach((item: Blog) => {
-                // const blogTitle: BlogTitle = { no: item.no, title: item.title};
-                setList([{...list, no: item.no, title: item.title}]);
-            });
-            console.log('list > ', list);
-        });
-
-    }, []);
+function List({blogList}: BlogProps) {
+    const listItems = blogList.map(item =>
+        <ListItems key={item.no} title={item.title} />
+    );
     return (
-        <ul>
+        <ul style={ListStyle}>
+            {listItems}
         </ul>
     )
 }

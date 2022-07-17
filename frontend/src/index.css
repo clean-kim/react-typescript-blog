@@ -12,3 +12,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: 'NanumGothicBold';
+  src:url("https://hangeul.pstatic.net/hangeul_static/css/nanum-gothic.css");
+}

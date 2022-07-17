@@ -1,5 +1,5 @@
 import {Blog} from "../interface/Blog";
 
-export function ListItems(props: Pick<Blog, 'no' | 'title'>) {
-    return <li data-value={props.no}>{props.title}</li>
+export function ListItems(props: Pick<Blog, 'title'>) {
+    return <li>{props.title}</li>
 }
