@@ -1,7 +1,7 @@
 import React from "react";
 import {ListItems} from "./ListItems";
 import {BlogProps} from "../interface/Blog";
-import ListStyle from "../assets/List.module.scss";
+import ListStyle from "../assets/css/List.module.scss";
 
 function List({blogList}: BlogProps) {
     const listItems = blogList.map(item =>

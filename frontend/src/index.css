@@ -17,3 +17,8 @@ code {
   font-family: 'NanumGothicBold';
   src:url("https://hangeul.pstatic.net/hangeul_static/css/nanum-gothic.css");
 }
+
+* {
+  margin: 0;
+  padding: 0;
+}
