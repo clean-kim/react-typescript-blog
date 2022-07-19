@@ -1,8 +1,3 @@
-.App {
-  text-align: center;
-  padding: 0 30px;
-}
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -38,6 +33,6 @@
   }
 }
 
-.App-mlr13rem {
-  margin: 0 13rem;
+.App-margin {
+  margin: 5rem 13rem 0 13rem;
 }
