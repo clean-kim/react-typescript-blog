@@ -1,20 +1,20 @@
 import React from 'react';
 import './App.css';
 import Home from './components/Home';
-import Title from './components/Title';
-import {BrowserRouter, Route, Routes} from "react-router-dom";
+import Main from './components/Main';
+import {Route, Routes} from "react-router-dom";
 import Insert from "./components/Insert";
+import Detail from "./components/Detail";
 
 function App() {
   return (
-      <BrowserRouter>
-          <Routes>
-              <Route element={<Title />}>
-                  <Route path="/" element={<Home />} />
-                  <Route path="/insert" element={<Insert />} />
-              </Route>
-          </Routes>
-      </BrowserRouter>
+      <Routes>
+          <Route path="/" element={<Main />}>
+              <Route index element={<Home />} />
+              <Route path="/insert" element={<Insert />} />
+              <Route path="/detail" element={<Detail />} />
+          </Route>
+      </Routes>
   );
 }
 
