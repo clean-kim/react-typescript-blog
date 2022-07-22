@@ -17,9 +17,6 @@ function Home() {
 
     return (
         <div>
-            <div style={{textAlign: 'right'}}>
-                <Link to="/insert" className={ButtonStyle.abtn}>글쓰기</Link>
-            </div>
             <List blogList={list} />
         </div>
     )
