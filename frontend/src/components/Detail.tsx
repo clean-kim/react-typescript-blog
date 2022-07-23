@@ -8,7 +8,7 @@ function Detail() {
     console.log('searchParams no >> ', no);
 
     useEffect(() => {
-        // axios.get(location.search)
+        axios.get('/api/')
     }, []);
 
     return (

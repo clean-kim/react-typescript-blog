@@ -9,5 +9,6 @@ import org.apache.ibatis.annotations.Mapper
 interface ApiMapper {
 
     fun selectBlogList(): List<Blog>
+    fun selectBlogOne(no: Int): Blog
 
 }

@@ -15,9 +15,11 @@ class ApiService {
     lateinit var apiMapper: ApiMapper
 
     fun getList(): List<Blog> {
-        val list = apiMapper.selectBlogList()
-        log.info("list >> $list")
-        return list
+        return apiMapper.selectBlogList()
+    }
+
+    fun getBlogOne(no: Int): Blog {
+        return apiMapper.selectBlogOne(no)
     }
 
 }

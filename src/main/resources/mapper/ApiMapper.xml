@@ -6,4 +6,11 @@
         SELECT * FROM blog
     </select>
 
+    <select id="selectBlogOne" resultType="Blog">
+        SELECT * FROM blog WHERE no = #{no}
+    </select>
+
+    <insert id="insertBlog">
+        INSERT INTO blog(title, content) VALUES(#{title}, #{content})
+    </insert>
 </mapper>

@@ -4,6 +4,7 @@ import kr.clean.reacttypescriptblog.model.Blog
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Controller
 import org.springframework.web.bind.annotation.RequestMapping
+import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.bind.annotation.ResponseBody
 
 @Controller
@@ -17,6 +18,12 @@ class ApiController {
     @ResponseBody
     fun getList(): List<Blog> {
         return apiService.getList()
+    }
+
+    @RequestMapping("/detail")
+    @ResponseBody
+    fun getBlogOne(@RequestParam no: Int): Blog {
+        return apiService.getBlogOne(no)
     }
 
 }
